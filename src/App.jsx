@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Button from './shared/components/button/Button';
+
 function App() {
   return (
     <div className="App">
-      teste
+      <Button>Confirm</Button>
     </div>
   );
 }
