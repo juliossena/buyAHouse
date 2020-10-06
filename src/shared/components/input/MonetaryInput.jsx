@@ -17,7 +17,7 @@ const mask = [
   /\d/, /\d/, /\d/, '.', /\d/, /\d/,
 ].reverse();
 
-const InputMonetario = ({
+const MonetaryInput = ({
   disabled,
   onChange,
   value,
@@ -77,16 +77,16 @@ const InputMonetario = ({
   );
 };
 
-InputMonetario.defaultProps = {
+MonetaryInput.defaultProps = {
   disabled: false,
   maxDigits: 15,
 };
 
-InputMonetario.propTypes = {
+MonetaryInput.propTypes = {
   value: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   maxDigits: PropTypes.number,
 };
 
-export default InputMonetario;
+export default MonetaryInput;
