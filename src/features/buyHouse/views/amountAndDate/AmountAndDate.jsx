@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import MonetaryInput from '../../../../shared/components/input/MonetaryInput';
+import MoneyInput from '../../../../shared/components/inputs/moneyInput/MoneyInput';
+import DateInput from '../../../../shared/components/inputs/dateInput/DateInput';
 import {
   Container,
   Amount,
@@ -8,21 +10,36 @@ import {
   InfoBox,
 } from './styles';
 
-const AmountAndDate = () => (
+const AmountAndDate = ({
+  amountMonth,
+  setAmountMonth,
+  amount,
+  setAmount,
+}) => (
   <Container>
     <Amount>
       <InfoBox>
         Total amount
       </InfoBox>
-      <MonetaryInput value="0.0" />
+      <MoneyInput value={amount} onChange={setAmount} />
     </Amount>
     <Date>
       <InfoBox>
         Reach goal by
       </InfoBox>
-      <MonetaryInput value="0.0" />
+      <DateInput
+        amountMonth={amountMonth}
+        setAmountMonth={setAmountMonth}
+      />
     </Date>
   </Container>
 );
+
+AmountAndDate.propTypes = {
+  amountMonth: PropTypes.number.isRequired,
+  setAmountMonth: PropTypes.func.isRequired,
+  amount: PropTypes.number.isRequired,
+  setAmount: PropTypes.func.isRequired,
+};
 
 export default AmountAndDate;

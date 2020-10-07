@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-import { colors } from '../../functions/colors';
+import { colors } from '../../../functions/colors';
 
 export const Container = styled.div`
     border: 1px solid ${colors.grey100};
     background-color: ${colors.white};
     height: 56px;
     display: flex;
+    border-radius: 4px;
 `;
 
 export const BoxPrefix = styled.div`
