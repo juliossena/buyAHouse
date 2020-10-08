@@ -9,7 +9,10 @@ const Button = ({
   children,
   onClick,
 }) => (
-  <Container onClick={onClick}>
+  <Container
+    test-id="container-button"
+    onClick={onClick}
+  >
     {children}
   </Container>
 );

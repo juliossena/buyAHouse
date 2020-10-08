@@ -49,6 +49,7 @@ const DateInput = ({
   return (
     <Container>
       <ArrowButton
+        test-id="arrow-left-button"
         type="left"
         onClick={handlePreviousMonth}
       />
@@ -61,6 +62,7 @@ const DateInput = ({
         </Year>
       </BoxDate>
       <ArrowButton
+        test-id="arrow-right-button"
         type="right"
         onClick={handleNextMonth}
       />

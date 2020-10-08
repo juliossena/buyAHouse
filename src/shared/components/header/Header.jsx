@@ -8,6 +8,7 @@ import {
 const Header = () => (
   <Container>
     <Icon
+      test-id="icon-header"
       src="img/logo.svg"
     />
   </Container>

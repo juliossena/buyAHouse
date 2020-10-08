@@ -43,6 +43,7 @@ const MoneyInput = ({
         <Prefix>$</Prefix>
       </BoxPrefix>
       <Input
+        test-id="input-date"
         type="tel"
         ref={inputRef}
         value={formatMoney(newValue)}
