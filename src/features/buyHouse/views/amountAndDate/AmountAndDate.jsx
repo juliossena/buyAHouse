@@ -21,13 +21,18 @@ const AmountAndDate = ({
       <InfoBox>
         Total amount
       </InfoBox>
-      <MoneyInput value={amount} onChange={setAmount} />
+      <MoneyInput
+        test-id="money-input"
+        value={amount}
+        onChange={setAmount}
+      />
     </Amount>
     <Date>
       <InfoBox>
         Reach goal by
       </InfoBox>
       <DateInput
+        test-id="date-input"
         amountMonth={amountMonth}
         setAmountMonth={setAmountMonth}
       />

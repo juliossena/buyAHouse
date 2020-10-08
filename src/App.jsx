@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from './shared/components/header/Header';
 import BuyHouse from './features/buyHouse';
-import Conclusion from './features/conclusion';
 
 function App() {
   return (
@@ -16,11 +15,6 @@ function App() {
               exact
               path="/"
               component={BuyHouse}
-            />
-            <Route
-              exact
-              path="/conclusion"
-              component={Conclusion}
             />
           </Switch>
         </BrowserRouter>
