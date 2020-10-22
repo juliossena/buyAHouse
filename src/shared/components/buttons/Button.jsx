@@ -8,10 +8,12 @@ import {
 const Button = ({
   children,
   onClick,
+  style,
 }) => (
   <Container
     test-id="container-button"
     onClick={onClick}
+    style={style}
   >
     {children}
   </Container>
@@ -20,6 +22,11 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
+  style: PropTypes.instanceOf(Object),
+};
+
+Button.defaultProps = {
+  style: {},
 };
 
 export default Button;

@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from './shared/components/header/Header';
 import BuyHouse from './features/buyHouse';
+import Home from './features/home';
 
 function App() {
   return (
@@ -13,8 +14,13 @@ function App() {
           <Switch>
             <Route
               exact
-              path="/"
+              path="/buy"
               component={BuyHouse}
+            />
+            <Route
+              exact
+              path="/"
+              component={Home}
             />
           </Switch>
         </BrowserRouter>
