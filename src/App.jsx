@@ -14,8 +14,8 @@ function App() {
           <Switch>
             <Route
               exact
-              path="/buy"
-              component={BuyHouse}
+              path="/buy/:id"
+              render={(props) => <BuyHouse {...props} />}
             />
             <Route
               exact

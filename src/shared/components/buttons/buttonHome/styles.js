@@ -20,12 +20,38 @@ export const Text = styled.h2`
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 24px;
     text-align: center;
     width: 100%;
-    colors: ${colors.text};
+    margin-bottom: 4px;
+    color: ${colors.text};
 `;
 
 export const Icon = styled.img`
-    margin: auto;
+`;
+
+export const Value = styled.p`
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 22px;
+    color: ${colors.primary};
+`;
+
+export const SubText = styled.h3`
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 17px;
+    color: ${colors.grey800};
+`;
+
+export const Month = styled.h2`
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: ${colors.grey900};
 `;

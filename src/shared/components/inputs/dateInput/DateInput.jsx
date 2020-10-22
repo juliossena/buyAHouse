@@ -13,6 +13,7 @@ import {
 const DateInput = ({
   amountMonth,
   setAmountMonth,
+  blockChangeDate,
 }) => {
   const newMoment = moment().add(amountMonth, 'months');
 
@@ -40,10 +41,13 @@ const DateInput = ({
   };
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+    if (!blockChangeDate) {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+    return () => null;
   });
 
   return (
@@ -73,6 +77,7 @@ const DateInput = ({
 DateInput.propTypes = {
   amountMonth: PropTypes.number.isRequired,
   setAmountMonth: PropTypes.func.isRequired,
+  blockChangeDate: PropTypes.bool.isRequired,
 };
 
 export default DateInput;

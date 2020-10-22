@@ -14,17 +14,17 @@ const ArrowButton = ({
     switch (type) {
       case 'left':
         return {
-          src: 'img/arrowLeft.svg',
+          src: '/img/arrowLeft.svg',
           radius: '4px 0px 0px 4px',
         };
       case 'right':
         return {
-          src: 'img/arrowRight.svg',
+          src: '/img/arrowRight.svg',
           radius: '0px 4px 4px 0px',
         };
       default:
         return {
-          src: 'img/arrowLeft.svg',
+          src: '/img/arrowLeft.svg',
           radius: '4px 0px 0px 4px',
         };
     }

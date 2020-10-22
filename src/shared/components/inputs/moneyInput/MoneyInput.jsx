@@ -13,6 +13,7 @@ const MoneyInput = ({
   onChange,
   value,
   maxDigits,
+  ...inputProps
 }) => {
   const [newValue, setNewValue] = useState(value);
   const inputRef = useRef(null);
@@ -43,6 +44,7 @@ const MoneyInput = ({
         <Prefix>$</Prefix>
       </BoxPrefix>
       <Input
+        {...inputProps}
         test-id="input-date"
         type="tel"
         ref={inputRef}

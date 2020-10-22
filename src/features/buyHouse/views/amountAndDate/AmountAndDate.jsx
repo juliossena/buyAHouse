@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import MoneyInput from '../../../../shared/components/inputs/moneyInput/MoneyInput';
@@ -15,30 +15,37 @@ const AmountAndDate = ({
   setAmountMonth,
   amount,
   setAmount,
-}) => (
-  <Container>
-    <Amount>
-      <InfoBox>
-        Total amount
-      </InfoBox>
-      <MoneyInput
-        test-id="money-input"
-        value={amount}
-        onChange={setAmount}
-      />
-    </Amount>
-    <Date>
-      <InfoBox>
-        Reach goal by
-      </InfoBox>
-      <DateInput
-        test-id="date-input"
-        amountMonth={amountMonth}
-        setAmountMonth={setAmountMonth}
-      />
-    </Date>
-  </Container>
-);
+}) => {
+  const [blockChangeDate, setBlockChangeDate] = useState(false);
+
+  return (
+    <Container>
+      <Amount>
+        <InfoBox>
+          Total amount
+        </InfoBox>
+        <MoneyInput
+          test-id="money-input"
+          value={amount}
+          onChange={setAmount}
+          onFocus={() => setBlockChangeDate(true)}
+          onBlur={() => setBlockChangeDate(false)}
+        />
+      </Amount>
+      <Date>
+        <InfoBox>
+          Reach goal by
+        </InfoBox>
+        <DateInput
+          test-id="date-input"
+          amountMonth={amountMonth}
+          setAmountMonth={setAmountMonth}
+          blockChangeDate={blockChangeDate}
+        />
+      </Date>
+    </Container>
+  );
+};
 
 AmountAndDate.propTypes = {
   amountMonth: PropTypes.number.isRequired,
