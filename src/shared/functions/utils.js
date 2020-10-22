@@ -1,8 +1,7 @@
 export const formatMoney = (number) => {
   try {
     if (Number.isFinite(Number(number))) {
-      let money = Math.ceil(parseFloat(number) * 100) / 100;
-      money = money.toFixed(2).split('.');
+      const money = number.toFixed(2).split('.');
       money[0] = `${money[0].split(/(?=(?:...)*$)/).join(',')}`;
       return money.join('.');
     }

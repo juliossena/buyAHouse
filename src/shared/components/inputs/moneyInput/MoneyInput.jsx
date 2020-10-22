@@ -48,7 +48,7 @@ const MoneyInput = ({
         test-id="input-date"
         type="tel"
         ref={inputRef}
-        value={formatMoney(newValue)}
+        value={newValue}
         onChange={handleOnChange}
         maxLength={maxDigits}
       />
