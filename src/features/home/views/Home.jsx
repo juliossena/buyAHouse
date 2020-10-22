@@ -13,7 +13,6 @@ import {
 const Home = () => {
   const history = useHistory();
   const infoStorage = getInfoStorage();
-  console.log(getInfoStorage());
 
   const renderButtons = (infoButton) => {
     const infoStorageFiltered = infoStorage.find((info) => infoButton.id === info.id);

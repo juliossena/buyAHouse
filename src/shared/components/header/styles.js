@@ -19,6 +19,7 @@ export const Container = styled.header`
 `;
 
 export const Icon = styled.img`
+    cursor: pointer;
 
     @media (max-width: 560px) {
         width: 65px;

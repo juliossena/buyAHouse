@@ -24,7 +24,7 @@ const ButtonHome = ({
       const newMoment = moment().add(infoLocalStorage.amountMonth, 'months');
       return (
         <>
-          <Value>
+          <Value test-id="value-button-home">
             {`$ ${formatMoney(infoLocalStorage.amount)}`}
           </Value>
           <SubText>
@@ -39,6 +39,7 @@ const ButtonHome = ({
 
     return (
       <Button
+        test-id="button-button-home"
         onClick={onClick}
         style={{ height: 40, marginTop: 24 }}
       >
@@ -48,7 +49,7 @@ const ButtonHome = ({
   };
 
   return (
-    <Container>
+    <Container test-id="container-button-home">
       <Icon src={icon} />
       <Text>
         {text}
@@ -65,7 +66,11 @@ ButtonHome.propTypes = {
   infoLocalStorage: PropTypes.shape({
     amountMonth: PropTypes.number.isRequired,
     amount: PropTypes.number.isRequired,
-  }).isRequired,
+  }),
+};
+
+ButtonHome.defaultProps = {
+  infoLocalStorage: null,
 };
 
 export default ButtonHome;

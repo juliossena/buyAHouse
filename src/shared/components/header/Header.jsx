@@ -7,10 +7,12 @@ import {
 
 const Header = () => (
   <Container>
-    <Icon
-      test-id="icon-header"
-      src="/img/logo.svg"
-    />
+    <a href="/">
+      <Icon
+        test-id="icon-header"
+        src="/img/logo.svg"
+      />
+    </a>
   </Container>
 );
 

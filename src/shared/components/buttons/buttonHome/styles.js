@@ -12,6 +12,12 @@ export const Container = styled.div`
     margin: 8px;
     padding: 32px;
     text-align: center;
+
+    @media (max-width: 560px) {
+        width: 152px;
+        height: 176px;
+        padding: 16px 8px;
+    }
 `;
 
 export const Text = styled.h2`
@@ -24,6 +30,12 @@ export const Text = styled.h2`
     width: 100%;
     margin-bottom: 4px;
     color: ${colors.text};
+
+    @media (max-width: 560px) {
+        font-size: 14px;
+        height: 36px;
+        line-height: 16px;
+    }
 `;
 
 export const Icon = styled.img`
